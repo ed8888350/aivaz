@@ -9,6 +9,10 @@
   --color-main-black: #070707;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-main);
@@ -181,6 +185,33 @@ p {
   font-weight: 400;
 }
 
+.portfolio {
+  padding: 80px 0 107px;
+  text-align: center;
+  background-color: var(--bg-main-grey);
+}
+
+.portfolio__title {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--color-main-black);
+  margin-bottom: 75px;
+}
+
+.portfolio__img-one,
+.portfolio__img-two,
+.portfolio__img-three {
+  width: min(100%, 950px);
+  height: min(100%, 630px);
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.portfolio__text-one,
+.portfolio__text-two {
+  margin-bottom: 95px;
+}
+
 @media (max-width: 480px) {
   .header {
     display: none;
@@ -213,6 +244,11 @@ p {
     height: 480px;
   }
   .history__text {
+    font-size: 14px;
+  }
+  .portfolio__text-one,
+  .portfolio__text-two,
+  .portfolio__text-three {
     font-size: 14px;
   }
 }
