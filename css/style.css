@@ -1,139 +1,184 @@
 @import url(../fonts/stylesheet.css);
 
 :root {
-    --bg-main: #ffffff;
-    --bg-main-grey: #f6f6f6;
+  --bg-main: #ffffff;
+  --bg-main-grey: #f6f6f6;
 
-    --font-color-grey: #828282;
+  --font-color-grey: #828282;
 
-    --color-main-black: #070707;
+  --color-main-black: #070707;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-main);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-main);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: unset;
+  text-decoration: none;
+  color: unset;
 }
 
 ul,
 li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-h1, p {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 970px;
-    padding: 0 10px;
-    margin: 0 auto;
+  max-width: 970px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .header {
-    padding: 25px 0 0;
+  padding: 25px 0 0;
 }
 
 .nav {
-
 }
 
 .nav::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin: 32px 0 0 0;
-    background-color: var(--font-color-grey);
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 32px 0 0 0;
+  background-color: var(--font-color-grey);
 }
 
 .nav__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__link {
-    position: relative;
-    color: var(--font-color-grey);
-    font-size: 18px;
-    font-weight: 600;
+  position: relative;
+  color: var(--font-color-grey);
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .nav__link::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    left: 0;
-    right: 100%;
-    bottom: -10px;
-    background-color: var(--font-color-grey);
-    transition: right .3s;
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 100%;
+  bottom: -10px;
+  background-color: var(--font-color-grey);
+  transition: right 0.3s;
 }
 
 .nav__link:hover {
-    color: var(--color-main-black);
+  color: var(--color-main-black);
 }
 
 .nav__link:hover::after {
-    right: 0;
+  right: 0;
 }
 
 .home {
-    padding: 45px 0 70px;
-    text-align: center;
+  padding: 45px 0 70px;
+  text-align: center;
 }
 
 .home__title {
-    font-weight: bold;
-    font-size: 45px; 
-    margin-bottom: 22px;   
-    color: #070707;
+  font-weight: bold;
+  font-size: 45px;
+  margin-bottom: 22px;
+  color: #070707;
 }
 
 .home__text {
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 35px;
 }
 
 .home__img {
-    width: 100%;
-    height: 535px;
-    object-fit: cover;
+  width: 100%;
+  height: 535px;
+  object-fit: cover;
 }
 
+.about {
+  text-align: center;
+  padding: 56px 30px 98px;
+  background-color: var(--bg-main-grey);
+  color: var(--color-main-black);
+}
+
+.about__title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 42px;
+}
+
+.about_subtitle-ru,
+.about_subtitle-en {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 15px auto;
+  max-width: 780px;
+}
+
+.about__text-ru,
+.about__text-en {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 15px auto;
+  text-align: justify;
+  max-width: 780px;
+}
+
+.divider {
+  height: 1px;
+  /* max-width: 420px;
+    width: 100%; */
+  width: min(420px, 100%);
+  background-color: var(--color-main-black);
+  border: none;
+  margin: 17px auto;
+}
 
 @media (max-width: 480px) {
-    .header {
-        display: none;
-    }
-    .home {
-        text-align: left;
-    }
-    .home__title {
-        max-width: 250px;
-        font-size: 32px; 
-        margin-bottom: 24px;   
-    }
-    .home__text {
-        max-width: 300px;
-        font-size: 14px;
-        margin-bottom: 28px;
-    }
+  .header {
+    display: none;
+  }
+  .home {
+    text-align: left;
+  }
+  .home__title {
+    max-width: 250px;
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .home__text {
+    max-width: 300px;
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .about_subtitle-ru,
+  .about_subtitle-en {
+    font-size: 14px;
+  }
+  .about__text-ru,
+  .about__text-en {
+    font-size: 14px;
+  }
 }
-
-
-
-
